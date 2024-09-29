@@ -1,0 +1,152 @@
+@import "../../assets/styles/variables";
+
+.pi-sider {
+  height: 100%;
+  background: $sider-bar-background !important;
+  overflow: hidden auto;
+  .ant-layout-sider-children {
+    height: 100%;
+    //position: relative;
+    overflow: visible auto;
+  }
+  &-left {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    &-top {
+      flex: 1;
+    }
+    &-bottom {
+      flex: 0;
+      hr {
+        color: rgba(255, 255, 255, 0.5);
+        border-bottom: none;
+      }
+      .pi-person {
+        margin: 10px;
+      }
+    }
+  }
+  &-right {
+    background-color: $sider-bar-background-switch;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -8px;
+    width: 10px;
+    cursor: pointer;
+    opacity: 0.01;
+    //transition: opacity 0.3s;
+    &:hover {
+      opacity: 1;
+      background-color: transparent;
+      border-left: 2px solid $sider-bar-background-switch;
+    }
+    .trigger-div {
+      height: 100%;
+      display:flex;
+      justify-content: flex-end;
+      position: relative;
+      .trigger-icon {
+        position: absolute;
+        top: 30px;
+        right: -4px;
+        font-size: 24px;
+        color: $sider-bar-background-switch;
+        background-color: #fff;
+        border-radius: 20px;
+      }
+    }
+  }
+  &.ant-layout-sider.ant-layout-sider-collapsed {
+    .pi-company-name, .pi-person {
+      margin: 10px auto;
+    }
+    .pi-company-text, .pi-person-text-container {
+      display: none;
+    }
+  }
+  .ant-menu-item.ant-menu-item-selected {
+    background: $sider-bar-selected-background !important;
+    line-height: 30px;
+  }
+  .pi-company {
+    display: flex;
+    align-items: center;
+    margin: 10px 8px 0;
+    .pi-company-name {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      .pi-company-text {
+        color: $sider-bar-font-color;
+        font-size: 24px;
+        font-weight: 600;
+        font-family: cursive;
+      }
+    }
+  }
+  .pi-person {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    .pi-person-text-container {
+      margin-left: 10px;
+      display: flex;
+      flex-direction: column;
+      flex: auto;
+    }
+    .pi-person-name {
+      color: $sider-bar-font-color;
+    }
+    .pi-person-role {
+      color: rgba($sider-bar-font-color, 0.5);
+      font-size: 12px;
+    }
+    .pi-person-icon {
+      color: $sider-bar-font-color;
+    }
+    .ant-avatar {
+      margin: 0 auto;
+    }
+  }
+  .role-dropdown {
+    margin-bottom: 15px;
+    margin-left: 30px;
+    width: 140px;
+    text-align: left;
+    height: 35px;
+    position: relative;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: capitalize;
+    .ant-select-selector {
+      background-color: #27a9e1;
+      border: 1px solid transparent;
+      border-radius: 3px;
+    }
+    .ant-select-arrow {
+      top: 49%;
+      color: #fbfbfb;
+    }
+  }
+  .pi-side-menu {
+    background: inherit;
+    font-weight: 600;
+    .ant-menu-item-divider {
+      margin: 10px;
+    }
+    .ant-menu-item-group {
+      .ant-menu-item-group-title {
+        padding: 4px 12px;
+        font-size: 10px;
+      }
+      .ant-menu-item {
+        height: 30px;
+        font-weight: 500;
+      }
+    }
+  }
+
+}

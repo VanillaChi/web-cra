@@ -1,0 +1,14 @@
+.pi-layout {
+  height: 100%;
+  .pi-sider {
+    z-index: 99;
+    overflow: visible;
+  }
+  .ant-layout-content {
+    z-index: 90;
+    background-color: #f9f9f9;
+  }
+  .ant-layout-footer {
+    padding: 18px 50px;
+  }
+}

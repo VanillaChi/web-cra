@@ -1,0 +1,45 @@
+@import 'variables.scss';
+
+@mixin VerticalCenter {
+  display: flex;
+  align-items: center;
+}
+@mixin LeftRightBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin DisplayCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin ContentTitle {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 24px;
+  color: $main-content-title;
+}
+
+@mixin ContentText {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  color: $main-content-text;
+}
+
+@mixin ContentTextLight {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  color: $main-content-text-light;
+}
+
+@mixin ContentContainer {
+  height: 100%;
+  background-color: $main-content-inner-background;
+  margin: 0 20px;
+  padding: 24px;
+}
